@@ -1,17 +1,6 @@
 group 'com.creativemind.open_apps_settings'
 version '1.0'
 
-buildscript {
-    repositories {
-        google()
-        jcenter()
-    }
-
-    dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.0'
-    }
-}
-
 rootProject.allprojects {
     repositories {
         google()
@@ -22,11 +11,14 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
+    namespace 'com.creativemind.open_apps_settings'
+
     compileSdkVersion 35
 
     defaultConfig {
         minSdkVersion 16
     }
+
     lintOptions {
         disable 'InvalidPackage'
     }
